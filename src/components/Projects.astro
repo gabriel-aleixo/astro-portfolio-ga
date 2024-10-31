@@ -1,0 +1,102 @@
+---
+const projects = [
+	{
+		title: 'Project One',
+		description: 'A full-stack web application built with React and Node.js',
+		tech: ['React', 'Node.js', 'MongoDB'],
+		link: 'https://github.com/yourusername/project-one'
+	},
+	{
+		title: 'Project Two',
+		description: 'An e-commerce platform using Next.js and Stripe',
+		tech: ['Next.js', 'Stripe', 'Tailwind CSS'],
+		link: 'https://github.com/yourusername/project-two'
+	},
+	{
+		title: 'Project Three',
+		description: 'A real-time chat application',
+		tech: ['Socket.io', 'Express', 'Redis'],
+		link: 'https://github.com/yourusername/project-three'
+	}
+];
+---
+
+<section class="projects">
+	<h3>Projects</h3>
+	<p class="subtitle">A selection of my recent work</p>
+
+	<div class="projects-grid">
+		{projects.map(project => (
+			<article class="project-card">
+				<h2>{project.title}</h2>
+				<div class="tech-stack">
+					{project.tech.map(tech => (
+						<span class="tech-tag">{tech}</span>
+					))}
+				</div>
+				<p>{project.description}</p>
+				<a href={project.link} target="_blank" rel="noopener noreferrer">
+					View Project →
+				</a>
+			</article>
+		))}
+	</div>
+</section>
+
+<style>
+	.projects {
+		margin-bottom: 4rem;
+	}
+
+	h3 {
+		font-size: 2.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.subtitle {
+		color: var(--text-secondary);
+		margin-bottom: 3rem;
+	}
+
+	.projects-grid {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.project-card {
+		padding: 1.5rem;
+		border-radius: 8px;
+		background: var(--bg-secondary);
+	}
+
+	.tech-stack {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+		margin: 1rem 0;
+	}
+
+	.tech-tag {
+		background: var(--bg-primary);
+		padding: 0.25rem 0.75rem;
+		border-radius: 15px;
+		font-size: 0.9rem;
+		color: var(--text-secondary);
+	}
+
+	.project-card a {
+		display: inline-block;
+		color: var(--accent);
+		text-decoration: none;
+	}
+
+	.project-card a:hover {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 768px) {
+		.projects-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

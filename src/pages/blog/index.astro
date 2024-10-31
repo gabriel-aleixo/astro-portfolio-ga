@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const posts = await Astro.glob('./posts/*.md');
+---
+
+<Layout title="Blog - John Doe">
+	<h1>Blog</h1>
+	<p class="subtitle">Thoughts, tutorials, and insights about web development</p>
+
+	<div class="posts">
+		{posts.map(post => (
+			<article class="post-card">
+				<h2>{post.frontmatter.title}</h2>
+				<div class="post-meta">
+					<time>{new Date(post.frontmatter.date).toLocaleDateString()}</time>
+					· {post.frontmatter.readingTime || '5 min read'}
+				</div>
+				<p>{post.frontmatter.description}</p>
+				<a href={post.url}>Read More →</a>
+			</article>
+		))}
+	</div>
+</Layout>
+
+<style>
+	h1 {
+		font-size: 2.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.subtitle {
+		color: var(--text-secondary);
+		margin-bottom: 3rem;
+	}
+
+	.posts {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.post-card {
+		padding: 1.5rem;
+		border-radius: 8px;
+		background: var(--bg-secondary);
+	}
+
+	.post-meta {
+		color: var(--text-secondary);
+		font-size: 0.9rem;
+		margin: 0.5rem 0 1rem;
+	}
+
+	.post-card a {
+		display: inline-block;
+		margin-top: 1rem;
+		color: var(--accent);
+		text-decoration: none;
+	}
+
+	.post-card a:hover {
+		text-decoration: underline;
+	}
+</style>

@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Projects from '../components/Projects.astro';
+---
+
+<Layout title="Gabriel Aleixo - Product Consultant & Developer">
+	<section class="hero">
+		<h1>Gabriel Aleixo</h1>
+		<h2>Startup Product Consultant & Full Stack Developer</h2>
+		<p>Helping Startups Build and Validate Products that Work</p>
+	</section>
+
+	<section class="about">
+		<h3>About Me</h3>
+		<p>
+			I'm Gabriel Aleixo, a product consultant and software developer with over 20 years of experience 
+			helping brands and startups turn ideas into reality. From managing digital marketing for global 
+			brands like NIVEA and Philips, to building MVPs for early-stage startups, I bring a mix of 
+			technical development, user insights, and market research expertise to the table.
+		</p>
+		<p>
+			I specialize in product development with a hands-on approach: coding prototypes, testing them 
+			with real users, and refining based on data. I'm also skilled at A/B testing, idea validation, 
+			and agile development, ensuring every feature I build meets actual market needs.
+		</p>
+	</section>
+
+	<section class="services">
+		<h3>What I Do</h3>
+		<p>I help startups and companies develop products from scratch. Here's how:</p>
+		
+		<div class="service-grid">
+			<div class="service-card">
+				<h4>MVP Development & Prototyping</h4>
+				<p>Whether you need a working prototype or a full MVP, I handle the front-end and back-end development, focusing on quick iterations and user feedback.</p>
+			</div>
+			<div class="service-card">
+				<h4>Market Research & User Behavior</h4>
+				<p>Drawing from my time leading research for Coca-Cola, P&G, and other global giants, I integrate market insights and user behavior data into the product development process, ensuring the product isn't just functional but meets market demand.</p>
+			</div>
+			<div class="service-card">
+				<h4>Agile Project Management</h4>
+				<p>I've led agile teams in both corporate environments and startups, using Scrum and Kanban to deliver products efficiently. I focus on prioritizing features, user testing, and feedback loops to deliver high-value outcomes.</p>
+			</div>
+		</div>
+	</section>
+
+	<Projects />
+
+	<section class="approach">
+		<h3>Approach</h3>
+		<div class="approach-grid">
+			<div class="approach-card">
+				<h4>Research First</h4>
+				<p>My background in market research means I don't just build features; I build what the market needs. Everything starts with understanding your users.</p>
+			</div>
+			<div class="approach-card">
+				<h4>Iterate & Test</h4>
+				<p>Using agile development and A/B testing, I develop products quickly and test features in real-time, ensuring each iteration brings value.</p>
+			</div>
+			<div class="approach-card">
+				<h4>Tech Stack</h4>
+				<p>I use React, Node.js, TypeScript, and modern cloud solutions like AWS and Google Cloud to develop scalable products that grow with your business.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="contact">
+		<h3>Get In Touch</h3>
+		<p>If you're ready to build a product that works and is backed by real market insights, let's chat. I'm based in Berlin, but work globally.</p>
+		<a href="/contact" class="cta-button">Contact Me</a>
+	</section>
+</Layout>
+
+<style>
+	.hero {
+		text-align: center;
+		padding: 4rem 0;
+	}
+
+	.hero h1 {
+		font-size: 3rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.hero h2 {
+		color: var(--text-secondary);
+		font-weight: 500;
+		margin-bottom: 1rem;
+	}
+
+	section {
+		margin-bottom: 4rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.service-grid,
+	.approach-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.service-card,
+	.approach-card {
+		padding: 1.5rem;
+		border-radius: 8px;
+		background: var(--bg-secondary);
+	}
+
+	.service-card h4,
+	.approach-card h4 {
+		margin-bottom: 1rem;
+		color: var(--accent);
+	}
+
+	.contact {
+		text-align: center;
+		background: var(--bg-secondary);
+		padding: 3rem;
+		border-radius: 8px;
+	}
+
+	.cta-button {
+		display: inline-block;
+		margin-top: 1.5rem;
+		padding: 0.75rem 2rem;
+		background: var(--accent);
+		color: white;
+		text-decoration: none;
+		border-radius: 4px;
+		font-weight: 500;
+		transition: opacity 0.2s;
+	}
+
+	.cta-button:hover {
+		opacity: 0.9;
+	}
+
+	@media (max-width: 768px) {
+		.service-grid,
+		.approach-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
