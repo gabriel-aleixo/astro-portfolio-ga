@@ -1,108 +1,154 @@
 ---
 interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
+import logoSvg from "../images/Logo.svg";
+import { Image } from "astro:assets";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Developer portfolio and blog" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<nav>
-			<div class="nav-container">
-				<a href="/" class="logo">JD</a>
-				<div class="nav-links">
-					<a href="/">Home</a>
-					<a href="/projects">Projects</a>
-					<a href="/blog">Blog</a>
-					<a href="/contact">Contact</a>
-				</div>
-			</div>
-		</nav>
-		<main>
-			<slot />
-		</main>
-		<footer>
-			<p>&copy; {new Date().getFullYear()} John Doe. All rights reserved.</p>
-		</footer>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="Gabriel Aleixo | Software Developer Portfolio and Blog"
+        />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <!-- Add Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-container">
+                <a href="/" class="logo">ga</a>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/projects">Projects</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <slot />
+        </main>
+        <footer>
+            <p>
+                &copy; {new Date().getFullYear()} Gabriel Aleixo. All rights reserved.
+            </p>
+        </footer>
+    </body>
 </html>
 <style is:global>
-	:root {
-		--text-primary: #2d3748;
-		--text-secondary: #4a5568;
-		--bg-primary: #ffffff;
-		--bg-secondary: #f7fafc;
-		--accent: #667eea;
-	}
-	
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
+    :root {
+        --text-primary: #2d3748;
+        --text-secondary: #4a5568;
+        --bg-primary: #ffffff;
+        --bg-secondary: #f7f7f7;
+        --accent: #794ec4;
+        --font-title: "Host Grotesk", sans-serif;
+        --font-headlines: "Yaro Bold", sans-serif;
+        --font-body: "Host Grotesk", sans-serif;
+    }
 
-	html {
-		font-family: system-ui, -apple-system, sans-serif;
-		background: var(--bg-primary);
-		color: var(--text-primary);
-	}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: left;
+    }
 
-	body {
-		max-width: 900px;
-		margin: 0 auto;
-		padding: 2rem;
-	}
+    html {
+        font-family: var(--font-body);
+        background: var(--bg-primary);
+        color: var(--text-primary);
+    }
 
-	nav {
-		margin-bottom: 2rem;
-	}
+    body {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem;
+        font-family: var(--font-body);
+    }
 
-	.nav-container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-headlines);
+        font-weight: normal;
+    }
 
-	.nav-links {
-		display: flex;
-		gap: 1.5rem;
-	}
+    nav {
+        margin-bottom: 2rem;
+    }
 
-	.nav-links a {
-		color: var(--text-secondary);
-		text-decoration: none;
-		font-weight: 500;
-	}
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-	.nav-links a:hover {
-		color: var(--accent);
-	}
+    .nav-links {
+        display: flex;
+        gap: 1.5rem;
+    }
 
-	.logo {
-		font-size: 1.5rem;
-		font-weight: bold;
-		color: var(--text-primary);
-		text-decoration: none;
-	}
+    .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-weight: 500;
+        font-family: var(--font-body);
+    }
 
-	main {
-		min-height: calc(100vh - 200px);
-	}
+    .nav-links a:hover {
+        color: var(--accent);
+    }
 
-	footer {
-		margin-top: 4rem;
-		padding: 2rem 0;
-		text-align: center;
-		color: var(--text-secondary);
-	}
+    .logo {
+        font-family: var(--font-headlines);
+        color: var(--text-secondary);
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--text-primary);
+        text-decoration: none;
+    }
+
+    main {
+        min-height: calc(100vh - 200px);
+    }
+
+    footer {
+        margin-top: 4rem;
+        padding: 2rem 0;
+        color: var(--text-secondary);
+    }
+
+    p {
+        font-family: var(--font-body);
+        line-height: 1.4em;
+        margin-bottom: 0.6em;
+    }
+
+    @font-face {
+        font-family: "Yaro Bold";
+        src:
+            url("/fonts/yaro-bold.woff2") format("woff2"),
+            url("/fonts/yaro-bold.woff") format("woff");
+        /* font-weight: 400;
+        font-style: normal; */
+    }
 </style>

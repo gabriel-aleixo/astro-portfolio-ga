@@ -1,151 +1,251 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Projects from '../components/Projects.astro';
+import Layout from "../layouts/Layout.astro";
+import Projects from "../components/Projects.astro";
+import Approach from "../components/Approach.astro";
 ---
 
 <Layout title="Gabriel Aleixo - Product Consultant & Developer">
-	<section class="hero">
-		<h1>Gabriel Aleixo</h1>
-		<h2>Startup Product Consultant & Full Stack Developer</h2>
-		<p>Helping Startups Build and Validate Products that Work</p>
-	</section>
+    <section class="hero">
+        <h1>Gabriel Aleixo</h1>
+        <h2>Product Consultant & Full Stack Developer</h2>
+        <p class="tagline">
+            I'm a digital product specialist who helps startups and small
+            businesses avoid costly mistakes and build things that work. From
+            testing ideas quickly to planning the market launch, I focus on
+            creating products that bring real value to the business.
+        </p>
+        <a href="/contact" class="cta-button cta-shine-effect-metal"
+            >Let's Build Together</a
+        >
+    </section>
 
-	<section class="about">
-		<h3>About Me</h3>
-		<p>
-			I'm Gabriel Aleixo, a product consultant and software developer with over 20 years of experience 
-			helping brands and startups turn ideas into reality. From managing digital marketing for global 
-			brands like NIVEA and Philips, to building MVPs for early-stage startups, I bring a mix of 
-			technical development, user insights, and market research expertise to the table.
-		</p>
-		<p>
-			I specialize in product development with a hands-on approach: coding prototypes, testing them 
-			with real users, and refining based on data. I'm also skilled at A/B testing, idea validation, 
-			and agile development, ensuring every feature I build meets actual market needs.
-		</p>
-	</section>
+    <section class="about">
+        <h3>About Me</h3>
+        <p>
+            I'm Gabriel Aleixo, a product consultant and software developer with
+            over 20 years of experience helping brands and startups turn ideas
+            into reality.
+        </p>
+        <p>
+            I've managed digital marketing for global brands like NIVEA and
+            Philips, built several MVPs for early-stage startups, have decades
+            of market research experience and a well-rounded mix of technical,
+            user insights, and marketing expertise.
+        </p>
+        <p>
+            I specialize in product development with a hands-on approach: coding
+            prototypes, testing them with real users, and refining based on
+            data. I'm skilled at customer development, idea validation,
+            go-to-market strategies and agile development, ensuring every
+            feature built meets actual market needs.
+        </p>
+    </section>
 
-	<section class="services">
-		<h3>What I Do</h3>
-		<p>I help startups and companies develop products from scratch. Here's how:</p>
-		
-		<div class="service-grid">
-			<div class="service-card">
-				<h4>MVP Development & Prototyping</h4>
-				<p>Whether you need a working prototype or a full MVP, I handle the front-end and back-end development, focusing on quick iterations and user feedback.</p>
-			</div>
-			<div class="service-card">
-				<h4>Market Research & User Behavior</h4>
-				<p>Drawing from my time leading research for Coca-Cola, P&G, and other global giants, I integrate market insights and user behavior data into the product development process, ensuring the product isn't just functional but meets market demand.</p>
-			</div>
-			<div class="service-card">
-				<h4>Agile Project Management</h4>
-				<p>I've led agile teams in both corporate environments and startups, using Scrum and Kanban to deliver products efficiently. I focus on prioritizing features, user testing, and feedback loops to deliver high-value outcomes.</p>
-			</div>
-		</div>
-	</section>
+    <section class="services">
+        <h3>What I Do</h3>
+        <p>
+            I collaborate with founders, entrepreneurs, and business owners to
+            develop digital products and user experiences that drive business
+            growth.
+        </p>
 
-	<Projects />
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>MVP Development & Prototyping</h4>
+                <p>
+                    Whether building a working prototype, an MVP, or a
+                    production-ready application, I specialize in rapid testing
+                    and data-driven iteration, doing both front-end and back-end
+                    development to quickly refine your product based on user
+                    feedback.
+                </p>
+            </div>
+            <div class="service-card">
+                <h4>Market Research & User Behavior</h4>
+                <p>
+                    With deep expertise in consumer behavior, I can design and
+                    manage sophisticated research initiatives that uncover
+                    actionable insights, seamlessly integrating market data and
+                    user behavior into the product development process to ensure
+                    your product is both functional and aligned with user needs.
+                </p>
+            </div>
+            <div class="service-card">
+                <h4>Go To Market Strategies</h4>
+                <p>
+                    From defining the ideal distribution model, identifying
+                    channels and partners, to planning communication and
+                    advertising, I assist in launching products in the
+                    market with a focus on maximum learning and return on
+                    investment.
+                </p>
+            </div>
+            <div class="service-card">
+                <h4>Agile Project Management</h4>
+                <p>
+                    With experience leading technical and business teams
+                    globally, I focus on stakeholder management and
+                    collaboration. Either as a Fractional CTO or CPO, or as a
+                    project leader, I help teams deliver the right products.
+                </p>
+            </div>
+        </div>
+    </section>
 
-	<section class="approach">
-		<h3>Approach</h3>
-		<div class="approach-grid">
-			<div class="approach-card">
-				<h4>Research First</h4>
-				<p>My background in market research means I don't just build features; I build what the market needs. Everything starts with understanding your users.</p>
-			</div>
-			<div class="approach-card">
-				<h4>Iterate & Test</h4>
-				<p>Using agile development and A/B testing, I develop products quickly and test features in real-time, ensuring each iteration brings value.</p>
-			</div>
-			<div class="approach-card">
-				<h4>Tech Stack</h4>
-				<p>I use React, Node.js, TypeScript, and modern cloud solutions like AWS and Google Cloud to develop scalable products that grow with your business.</p>
-			</div>
-		</div>
-	</section>
+    <Projects />
 
-	<section class="contact">
-		<h3>Get In Touch</h3>
-		<p>If you're ready to build a product that works and is backed by real market insights, let's chat. I'm based in Berlin, but work globally.</p>
-		<a href="/contact" class="cta-button">Contact Me</a>
-	</section>
+    <Approach />
+
+    <section class="contact">
+        <h3>Get In Touch</h3>
+        <p>
+            If you're ready to build a product that works and is backed by real
+            market insights, let's chat. I'm based in Berlin, but work globally.
+        </p>
+        <a href="/contact" class="cta-button">Contact Me</a>
+    </section>
 </Layout>
 
 <style>
-	.hero {
-		text-align: center;
-		padding: 4rem 0;
-	}
+    .hero {
+        text-align: center;
+        padding: 4rem 0;
+    }
 
-	.hero h1 {
-		font-size: 3rem;
-		margin-bottom: 0.5rem;
-	}
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        font-family: var(--font-title);
+        text-transform: uppercase;
+        font-weight: 800;
+        line-height: 1.1em;
+    }
 
-	.hero h2 {
-		color: var(--text-secondary);
-		font-weight: 500;
-		margin-bottom: 1rem;
-	}
+    .hero h2 {
+        color: var(--text-secondary);
+        font-weight: 500;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
 
-	section {
-		margin-bottom: 4rem;
-	}
+    .hero .tagline {
+        font-size: 1.2em;
+    }
 
-	h3 {
-		font-size: 1.5rem;
-		margin-bottom: 1.5rem;
-	}
+    section {
+        margin-bottom: 4rem;
+    }
 
-	.service-grid,
-	.approach-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-		margin-top: 2rem;
-	}
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
 
-	.service-card,
-	.approach-card {
-		padding: 1.5rem;
-		border-radius: 8px;
-		background: var(--bg-secondary);
-	}
+    .service-grid,
+    .approach-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
 
-	.service-card h4,
-	.approach-card h4 {
-		margin-bottom: 1rem;
-		color: var(--accent);
-	}
+    .service-card,
+    .approach-card {
+        padding: 1.5rem;
+        border-radius: 8px;
+        background: var(--bg-secondary);
+    }
 
-	.contact {
-		text-align: center;
-		background: var(--bg-secondary);
-		padding: 3rem;
-		border-radius: 8px;
-	}
+    .service-card h4,
+    .approach-card h4 {
+        margin-bottom: 1rem;
+        color: var(--accent);
+    }
 
-	.cta-button {
-		display: inline-block;
-		margin-top: 1.5rem;
-		padding: 0.75rem 2rem;
-		background: var(--accent);
-		color: white;
-		text-decoration: none;
-		border-radius: 4px;
-		font-weight: 500;
-		transition: opacity 0.2s;
-	}
+    .contact {
+        text-align: center;
+        background: var(--bg-secondary);
+        padding: 3rem;
+        border-radius: 8px;
+    }
 
-	.cta-button:hover {
-		opacity: 0.9;
-	}
+    .cta-button {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.75rem 2rem;
+        color: black;
+        text-decoration: none;
+        border-radius: 1rem;
+        font-weight: 500;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        background: linear-gradient(0.01turn, #dbcdf4, #f9f9f9, #dbdbdb);
+    }
 
-	@media (max-width: 768px) {
-		.service-grid,
-		.approach-grid {
-			grid-template-columns: 1fr;
-		}
-	}
+    .cta-shine-effect-metal {
+        --shine-deg: 45deg;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-shine-effect-metal:after {
+        content: "";
+        top: 0;
+        transform: translateX(100%) rotate(var(--shine-deg));
+        width: 300%;
+        height: 300%;
+        position: absolute;
+        z-index: 1;
+        background: linear-gradient(
+            30deg,
+            transparent 20%,
+            transparent 40%,
+            rgb(255, 255, 255, 0.4) 50%,
+            rgb(255, 255, 255, 0.4) 55%,
+            transparent 70%,
+            transparent 100%
+        );
+        transition: transform 0s ease-in;
+        transform: translateX(100%) rotate(var(--shine-deg));
+        animation: shine 1s ease-in;
+        animation-delay: 2s;
+    }
+
+    .cta-shine-effect-metal:hover:after {
+        animation: hover-shine 1s ease-in;
+    }
+
+    @-webkit-keyframes shine {
+        0% {
+            transform: translateX(100%) rotate(var(--shine-deg));
+        }
+        50% {
+            transform: translateX(-100%) rotate(var(--shine-deg));
+        }
+        100% {
+            transform: translateX(100%) rotate(var(--shine-deg));
+        }
+    }
+
+    @-webkit-keyframes hover-shine {
+        0% {
+            transform: translateX(100%) rotate(var(--shine-deg));
+        }
+        50% {
+            transform: translateX(-100%) rotate(var(--shine-deg));
+        }
+        100% {
+            transform: translateX(100%) rotate(var(--shine-deg));
+        }
+    }
+
+    /* .cta-button:hover {
+        opacity: 0.9;
+    } */
+
+    @media (max-width: 768px) {
+        .service-grid,
+        .approach-grid {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>

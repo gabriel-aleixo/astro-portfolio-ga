@@ -1,0 +1,100 @@
+<section class="approach">
+    <h3>Approach</h3>
+    <p class="subtitle">My pilars for product development</p>
+
+    <div class="approach-grid">
+        <div class="approach-card">
+            <h4>Research First</h4>
+            <p>
+                My background in market research means I don't just build
+                features; I build what the market needs. Everything starts with
+                understanding your users.
+            </p>
+        </div>
+        <div class="approach-card">
+            <h4>Iterate & Test</h4>
+            <p>
+                Make informed assumptions and test them. Prioritize learning.
+                Always focus on the next sprint, not next year.
+            </p>
+        </div>
+        <div class="approach-card">
+            <h4>Tech Stack</h4>
+            <p>
+                Start small. Stay flexible. Over-engineering early can lead to
+                missed opportunities (sunken cost fallacy is a thing). Use
+                proven, scalable solutions and build only what's essential.
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .aproach {
+        margin-bottom: 4rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+        color: var(--text-secondary);
+        margin-bottom: 3rem;
+    }
+
+    section {
+        margin-bottom: 4rem;
+    }
+
+    .service-grid,
+    .approach-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .approach-card {
+        padding: 1.5rem;
+        border-radius: 8px;
+        background: var(--bg-secondary);
+    }
+
+    .approach-card h4 {
+        margin-bottom: 1rem;
+        color: var(--accent);
+    }
+
+    .tech-stack {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin: 1rem 0;
+    }
+
+    .tech-tag {
+        background: var(--bg-primary);
+        padding: 0.25rem 0.75rem;
+        border-radius: 15px;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+    }
+
+    .project-card a {
+        display: inline-block;
+        color: var(--accent);
+        text-decoration: none;
+    }
+
+    .project-card a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
