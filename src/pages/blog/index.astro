@@ -3,11 +3,13 @@ import Layout from "../../layouts/Layout.astro";
 const posts = await Astro.glob("./posts/*.md");
 ---
 
-<Layout title="Blog - John Doe">
-    <h1>Blog</h1>
-    <p class="subtitle">
-        Notes and thoughts about projects, ideas and personal interests
-    </p>
+<Layout title="Blog - Gabriel Aleixo">
+    <section class="header">
+        <h1>Blog</h1>
+        <p class="subtitle">
+            Notes and thoughts about projects, ideas, and personal interests
+        </p>
+    </section>
 
     <div class="posts">
         {
@@ -41,10 +43,13 @@ const posts = await Astro.glob("./posts/*.md");
         margin-bottom: 0.5rem;
     }
 
-    .subtitle {
+    .header p {
         color: var(--text-secondary);
-        margin-bottom: 3rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
     }
+
 
     .posts {
         display: grid;

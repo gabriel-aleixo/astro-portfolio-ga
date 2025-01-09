@@ -1,43 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Projects from "../components/Projects.astro";
-import Approach from "../components/Approach.astro";
+import Contact from "../components/Contact.astro";
+import CTAButton from "../components/CTAButton.astro";
 ---
 
 <Layout title="Gabriel Aleixo - Product Consultant & Developer">
     <section class="hero">
         <h1>Gabriel Aleixo</h1>
         <h2>Product Consultant & Full Stack Developer</h2>
-        <p class="tagline">
-            I'm a digital product specialist who helps startups and small
-            businesses avoid costly mistakes and build things that work. From
-            testing ideas quickly to planning the market launch, I focus on
-            creating products that bring real value to the business.
+        <p>
+            I specialize in helping startups and small businesses make smart
+            product decisions, while avoiding costly mistakes and never-ending
+            development cycles.
         </p>
-        <a href="/contact" class="cta-button cta-shine-effect-metal"
-            >Let's Build Together</a
-        >
+
+        <CTAButton text="Let's Build Together" shine={true} />
     </section>
 
     <section class="about">
         <h3>About Me</h3>
+
         <p>
-            I'm Gabriel Aleixo, a product consultant and software developer with
-            over 20 years of experience helping brands and startups turn ideas
-            into reality.
+            I have been a product builder and software developer since 2018,
+            after a 20+ year career in online marketing and market research,
+            holding leadership roles in Brazil, Germany, France, and the U.S.
         </p>
         <p>
-            I've managed digital marketing for global brands like NIVEA and
-            Philips, built several MVPs for early-stage startups, have decades
-            of market research experience and a well-rounded mix of technical,
-            user insights, and marketing expertise.
+            In 2018, I transitioned to technology by leading the launch an ad
+            analytics platform. In 2020, I founded a B2B SaaS startup, creating
+            two products from scratch.
         </p>
         <p>
-            I specialize in product development with a hands-on approach: coding
-            prototypes, testing them with real users, and refining based on
-            data. I'm skilled at customer development, idea validation,
-            go-to-market strategies and agile development, ensuring every
-            feature built meets actual market needs.
+            As a founder, I saw how non-technical entrepreneurs struggle with
+            building products, often over-engineering and overspending. So I
+            taught myself to code and now I help businesses create or improve
+            their products, using my startup experience and background in
+            marketing and leadership.
         </p>
     </section>
 
@@ -46,42 +45,51 @@ import Approach from "../components/Approach.astro";
 
         <div class="service-grid">
             <div class="service-card">
-                <h4>MVP Development & Prototyping</h4>
-                <p>
-                    Whether building a working prototype, an MVP, or a
-                    production-ready application, I specialize in rapid testing
-                    and data-driven iteration, doing both front-end and back-end
-                    development to quickly refine your product based on user
-                    feedback.
-                </p>
+                <h4>Product Consulting for Startups & Small Businesses</h4>
+                <div class="card-content">
+                    <p>
+                        This is the core of my professional work, where I help
+                        businesses with:
+                    </p>
+                    <ul>
+                        <li>
+                            Strategy & Planning: Build a strong foundation with
+                            actionable roadmaps and market insights.
+                        </li>
+                        <li>
+                            Development Leadership: Lead technical and product
+                            teams as a Fractional CTO or CPO.
+                        </li>
+                        <li>
+                            MVP Development & Testing: Turn ideas into products
+                            and validate them with real users.
+                        </li>
+                    </ul>
+                </div>
+                <a class="card-link" href="/consulting">Learn more →</a>
             </div>
             <div class="service-card">
-                <h4>Market Research & User Behavior</h4>
-                <p>
-                    With deep expertise in consumer behavior, I can design and
-                    manage sophisticated research initiatives that uncover
-                    actionable insights, seamlessly integrating market data and
-                    user behavior into the product development process to ensure
-                    your product is both functional and aligned with user needs.
-                </p>
+                <h4>Product Maker</h4>
+                <div class="card-content">
+                    <p>
+                        With expertise in user behavior, and a knack for
+                        tinkering with technology, I love building tools to
+                        tackle real-world problems. While some projects reflect
+                        my personal curiosity, they allow me to explore new
+                        ideas and technologies, while flexing my ability to
+                        create products from start to finish.
+                    </p>
+                </div>
+                <a class="card-link" href="/projects">Check out my projects →</a
+                >
             </div>
             <div class="service-card">
-                <h4>Go To Market Strategies</h4>
+                <h4>Content & Solutions in TTRPG</h4>
                 <p>
-                    From defining the ideal distribution model, identifying
-                    channels and partners, to planning communication and
-                    advertising, I assist in launching products in the
-                    market with a focus on maximum learning and return on
-                    investment.
-                </p>
-            </div>
-            <div class="service-card">
-                <h4>Agile Project Management</h4>
-                <p>
-                    With experience leading technical and business teams
-                    globally, I focus on stakeholder management and
-                    collaboration. Either as a Fractional CTO or CPO, or as a
-                    project leader, I help teams deliver the right products.
+                    I'm a fan of tabletop role-playing games - forever GM☝️ -
+                    and recently I've been creating content and solutions for
+                    them. I'm working on a few concepts to help players and game
+                    masters, and I'm always looking for new ideas to explore.
                 </p>
             </div>
         </div>
@@ -89,16 +97,7 @@ import Approach from "../components/Approach.astro";
 
     <Projects />
 
-    <Approach />
-
-    <section class="contact">
-        <h3>Get In Touch</h3>
-        <p>
-            If you're ready to build a product that works and is backed by real
-            market insights, let's chat. I'm based in Berlin, but work globally.
-        </p>
-        <a href="/contact" class="cta-button">Contact Me</a>
-    </section>
+    <Contact />
 </Layout>
 
 <style>
@@ -109,7 +108,7 @@ import Approach from "../components/Approach.astro";
 
     .hero h1 {
         font-size: 3rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
         font-family: var(--font-title);
         text-transform: uppercase;
         font-weight: 800;
@@ -117,129 +116,80 @@ import Approach from "../components/Approach.astro";
     }
 
     .hero h2 {
+        font-size: 1.5rem;
         color: var(--text-secondary);
         font-weight: 500;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
+        margin-bottom: 2rem;
+        text-transform: capitalize;
     }
 
-    .hero .tagline {
-        font-size: 1.2em;
-    }
-
-    section {
-        margin-bottom: 4rem;
+    .hero p {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        font-weight: 400;
+        margin-bottom: 2rem;
     }
 
     h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.75rem;
+        margin-bottom: 1.75rem;
     }
 
-    .service-grid,
-    .approach-grid {
+    .service-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: 1fr;
+
+        /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
         gap: 2rem;
         margin-top: 2rem;
     }
 
-    .service-card,
-    .approach-card {
+    .service-card {
         padding: 1.5rem;
         border-radius: 8px;
         background: var(--bg-secondary);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 
-    .service-card h4,
-    .approach-card h4 {
+    .service-card h4 {
         margin-bottom: 1rem;
         color: var(--accent);
     }
 
-    .contact {
-        text-align: center;
-        background: var(--bg-secondary);
-        padding: 3rem;
-        border-radius: 8px;
+    .card-content {
+        flex: 1;
     }
 
-    .cta-button {
+    .card-content ul {
+        margin-top: 0.5rem;
+        padding-left: 1.25rem;
+    }
+
+    .card-content li {
+        margin-bottom: 0.5rem;
+    }
+
+    .card-content li:last-child {
+        margin-bottom: 0;
+    }
+
+    .card-link {
         display: inline-block;
-        margin-top: 1.5rem;
-        padding: 0.75rem 2rem;
-        color: black;
+        margin-top: 1rem;
+        color: var(--accent);
         text-decoration: none;
-        border-radius: 1rem;
         font-weight: 500;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-        background: linear-gradient(0.01turn, #dbcdf4, #f9f9f9, #dbdbdb);
+        transition: color 0.2s ease;
     }
 
-    .cta-shine-effect-metal {
-        --shine-deg: 45deg;
-        position: relative;
-        overflow: hidden;
+    .card-link:hover {
+        color: var(--accent-dark);
     }
-
-    .cta-shine-effect-metal:after {
-        content: "";
-        top: 0;
-        transform: translateX(100%) rotate(var(--shine-deg));
-        width: 300%;
-        height: 300%;
-        position: absolute;
-        z-index: 1;
-        background: linear-gradient(
-            30deg,
-            transparent 20%,
-            transparent 40%,
-            rgb(255, 255, 255, 0.4) 50%,
-            rgb(255, 255, 255, 0.4) 55%,
-            transparent 70%,
-            transparent 100%
-        );
-        transition: transform 0s ease-in;
-        transform: translateX(100%) rotate(var(--shine-deg));
-        animation: shine 1s ease-in;
-        animation-delay: 2s;
-    }
-
-    .cta-shine-effect-metal:hover:after {
-        animation: hover-shine 1s ease-in;
-    }
-
-    @-webkit-keyframes shine {
-        0% {
-            transform: translateX(100%) rotate(var(--shine-deg));
-        }
-        50% {
-            transform: translateX(-100%) rotate(var(--shine-deg));
-        }
-        100% {
-            transform: translateX(100%) rotate(var(--shine-deg));
-        }
-    }
-
-    @-webkit-keyframes hover-shine {
-        0% {
-            transform: translateX(100%) rotate(var(--shine-deg));
-        }
-        50% {
-            transform: translateX(-100%) rotate(var(--shine-deg));
-        }
-        100% {
-            transform: translateX(100%) rotate(var(--shine-deg));
-        }
-    }
-
-    /* .cta-button:hover {
-        opacity: 0.9;
-    } */
 
     @media (max-width: 768px) {
-        .service-grid,
-        .approach-grid {
+        .service-grid {
             grid-template-columns: 1fr;
         }
     }

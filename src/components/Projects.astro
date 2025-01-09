@@ -24,13 +24,13 @@ const projects = [
 ---
 
 <section class="projects">
-    <h3>Recent Projects</h3>
+    <h2>Recent Projects</h2>
 
     <div class="projects-grid">
         {
             projects.map((project) => (
                 <article class="project-card">
-                    <h2>{project.title}</h2>
+                    <h3>{project.title}</h3>
                     <div class="tech-stack">
                         {project.tech.map((tech) => (
                             <span class="tech-tag">{tech}</span>
@@ -55,14 +55,9 @@ const projects = [
         margin-bottom: 4rem;
     }
 
-    h3 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .subtitle {
-        color: var(--text-secondary);
-        margin-bottom: 3rem;
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.75rem;
     }
 
     .projects-grid {

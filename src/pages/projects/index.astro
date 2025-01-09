@@ -3,9 +3,12 @@ import Layout from "../../layouts/Layout.astro";
 const projects = await Astro.glob("./details/*.md");
 ---
 
-<Layout title="Projects - John Doe">
-    <h1>Projects</h1>
-    <p class="subtitle">A selection of my recent work</p>
+<Layout title="Projects - Gabriel Aleixo">
+    <section class="header">
+
+        <h1>Projects</h1>
+        <p>A selection of my recent work</p>
+    </section>
 
     <div class="projects">
         {
@@ -37,9 +40,11 @@ const projects = await Astro.glob("./details/*.md");
         margin-bottom: 0.5rem;
     }
 
-    .subtitle {
+    .header p {
         color: var(--text-secondary);
-        margin-bottom: 3rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
     }
 
     .projects {

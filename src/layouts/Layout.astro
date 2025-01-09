@@ -34,6 +34,7 @@ import { Image } from "astro:assets";
                 <a href="/" class="logo">ga</a>
                 <div class="nav-links">
                     <a href="/">Home</a>
+                    <a href="/consulting">Consulting</a>
                     <a href="/projects">Projects</a>
                     <a href="/blog">Blog</a>
                     <a href="/contact">Contact</a>
@@ -93,7 +94,7 @@ import { Image } from "astro:assets";
     }
 
     nav {
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
     .nav-container {
@@ -131,6 +132,10 @@ import { Image } from "astro:assets";
         min-height: calc(100vh - 200px);
     }
 
+    section {
+        margin-bottom: 4rem;
+    }
+
     footer {
         margin-top: 4rem;
         padding: 2rem 0;
@@ -148,7 +153,34 @@ import { Image } from "astro:assets";
         src:
             url("/fonts/yaro-bold.woff2") format("woff2"),
             url("/fonts/yaro-bold.woff") format("woff");
-        /* font-weight: 400;
-        font-style: normal; */
     }
+
+    /* Add media query for smaller screens */
+    @media (max-width: 490px) {
+        .nav-links {
+            gap: 0.75rem; /* Reduce gap between nav items */
+        }
+        
+        .nav-links a {
+            font-size: 0.9rem; /* Reduce font size */
+        }
+
+        .logo {
+            font-size: 1.2rem; /* Slightly reduce logo size */
+        }
+    }
+    @media (max-width: 390px) {
+        .nav-links {
+            gap: 0.70rem; /* Reduce gap between nav items */
+        }
+        
+        .nav-links a {
+            font-size: 0.8rem; /* Reduce font size */
+        }
+
+        .logo {
+            font-size: 1rem; /* Slightly reduce logo size */
+        }
+    }
+
 </style>

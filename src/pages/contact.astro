@@ -2,9 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Contact - John Doe">
-	<h1>Contact</h1>
-	<p class="subtitle">Let's work together</p>
+<Layout title="Contact - Gabriel Aleixo">
+	<section class="header">
+
+		<h1>Contact</h1>
+		<p class="subtitle">Let's work together</p>
+	</section>
 
 	<div class="contact-container">
 		<div class="contact-info">
@@ -15,10 +18,10 @@ import Layout from '../layouts/Layout.astro';
 			</p>
 			
 			<div class="social-links">
-				<a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+				<a href="https://github.com/gabriel-aleixo" target="_blank" rel="noopener noreferrer">
 					GitHub
 				</a>
-				<a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+				<a href="https://linkedin.com/in/gabrielaleixo" target="_blank" rel="noopener noreferrer">
 					LinkedIn
 				</a>
 				<a href="mailto:your.email@example.com">
@@ -49,15 +52,18 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-	h1 {
-		font-size: 2.5rem;
-		margin-bottom: 0.5rem;
-	}
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
 
-	.subtitle {
-		color: var(--text-secondary);
-		margin-bottom: 3rem;
-	}
+    .header p {
+        color: var(--text-secondary);
+        margin-bottom: 3rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
 
 	.contact-container {
 		display: grid;

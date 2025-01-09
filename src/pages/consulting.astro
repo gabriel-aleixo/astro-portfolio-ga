@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Approach from "../components/Approach.astro";
+import Contact from "../components/Contact.astro";
+import Services from "../components/Services.astro";
+---
+
+<Layout title="Gabriel Aleixo - Product Consulting">
+    <section class="header">
+        <h1>Product Consulting</h1>
+        <p>
+            With extensive marketing, market research, and leadership
+            experience, I can offer a unique blend of skills to help early stage
+            startups and small businesses.
+        </p>
+    </section>
+
+    <Services />
+
+    <Approach />
+
+    <Contact />
+</Layout>
+
+<style>
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .header p {
+        color: var(--text-secondary);
+        margin-bottom: 3rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+
+</style>
