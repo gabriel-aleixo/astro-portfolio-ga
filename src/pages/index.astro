@@ -3,9 +3,14 @@ import Layout from "../layouts/Layout.astro";
 import Projects from "../components/Projects.astro";
 import Contact from "../components/Contact.astro";
 import CTAButton from "../components/CTAButton.astro";
+// Get just featured/recent projects for homepage
+const allProjects = await Astro.glob("../pages/projects/details/*.md");
+const featuredProjects = allProjects
+    .filter((project) => project.frontmatter.featured)
+    .slice(0, 3); // Only show top 3
 ---
 
-<Layout title="Gabriel Aleixo - Product Consultant & Developer">
+<Layout title="Product Consultant & Developer | Gabriel Aleixo">
     <section class="hero">
         <h1>Gabriel Aleixo</h1>
         <h2>Product Consultant & Full Stack Developer</h2>
@@ -95,7 +100,10 @@ import CTAButton from "../components/CTAButton.astro";
         </div>
     </section>
 
-    <Projects />
+    <section class="projects">
+        <h3>Featured Projects</h3>
+        <Projects projects={featuredProjects} />
+    </section>
 
     <Contact />
 </Layout>
