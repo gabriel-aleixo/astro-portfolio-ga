@@ -1,21 +1,51 @@
 ---
 import Layout from "./Layout.astro";
+import { Image } from "astro:assets";
 
 const { frontmatter } = Astro.props;
+
+// Dynamically import all images
+const allImages = import.meta.glob('/src/images/**/*.{jpeg,jpg,png,gif,webp}');
+const images = await Promise.all(
+    frontmatter.images.map(async (imagePath) => {
+        if (imagePath in allImages) {
+            return allImages[imagePath]();
+        }
+        throw new Error(`Image ${imagePath} not found`);
+    })
+);
 ---
 
 <Layout title={frontmatter.title}>
     <article class="blog-post">
         <header>
             <h1>{frontmatter.title}</h1>
-            <!-- <div class="post-meta">
-				<time>{new Date(frontmatter.date).toLocaleDateString()}</time>
-				· {frontmatter.readingTime}
-			</div> -->
         </header>
         <div class="content">
             <slot />
         </div>
+        
+        {frontmatter.images && frontmatter.images.length > 0 && (
+            <div class="image-carousel">
+                <div class="carousel-container">
+                    {images.map((imageModule, index) => (
+                        <div class="carousel-slide" id={`slide-${index}`}>
+                            <Image 
+                                src={imageModule.default}
+                                alt={`Project image ${index + 1}`}
+                                width={720}
+                                quality="mid"
+                            />
+                        </div>
+                    ))}
+                </div>
+                <div class="carousel-nav">
+                    {frontmatter.images.map((_, index) => (
+                        <a href={`#slide-${index}`} class="carousel-dot"></a>
+                    ))}
+                </div>
+            </div>
+        )}
     </article>
 </Layout>
 
@@ -58,5 +88,51 @@ const { frontmatter } = Astro.props;
 
     .content :global(li) {
         margin: 0.5rem 0;
+    }
+
+    .image-carousel {
+        margin-top: 3rem;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .carousel-container {
+        display: flex;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel-slide {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .carousel-nav {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--text-secondary);
+        opacity: 0.5;
+        transition: opacity 0.3s;
+    }
+
+    .carousel-dot:hover,
+    .carousel-dot:target {
+        opacity: 1;
     }
 </style>
