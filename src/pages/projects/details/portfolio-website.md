@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/ProjectDetail.astro
 title: This Website
-description: A modern, performant portfolio website built with Astro, focusing on clean design and optimal user experience. Built using Astro and well structured HTML and CSS, it features a clean and responsive design, optimized for exceptional performance and a great user experience on both desktop and mobile devices.
+description: A modern, performant portfolio website focusing on clean design and optimal user experience. Built with Astro for exceptional performance on desktop and mobile devices.
 tech: ["Astro", "TypeScript", "Tailwind CSS", "Netlify"]
 link: https://github.com/gabriel-aleixo/astro-portfolio-ga
 date: 2025-02-01
