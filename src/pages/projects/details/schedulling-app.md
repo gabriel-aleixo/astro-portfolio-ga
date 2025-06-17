@@ -7,11 +7,10 @@ link: https://github.com/yourusername/project-one
 date: 2024-10-01
 featured: true
 images:
-    - /src/images/project-images/scheduling-app/image1.jpeg
-    - /src/images/project-images/scheduling-app/image2.jpeg
-    - /src/images/project-images/scheduling-app/image3.jpeg
-    - /src/images/project-images/scheduling-app/image4.jpeg
-    - /src/images/project-images/scheduling-app/image5.jpeg
+    - /src/images/project-images/scheduling-app/1.svg
+    - /src/images/project-images/scheduling-app/2.svg
+    - /src/images/project-images/scheduling-app/3.svg
+    - /src/images/project-images/scheduling-app/4.svg
 ---
 
 ## The Problem
@@ -38,7 +37,7 @@ While the app allowed attendees to register their preferences for game sessions 
 
 The organizers initially planned to manually allocate players according to preferences, to guarantee everyone would have at least one spot in a game they wanted. This proved to be a quite complicated puzzle to crack.
 
-I used AI to go through a step-by-step process of organization and classification of the raw data, using by my knowledge of ranked-preference techniques common in market research. Given correct an specific prompts, the model was able to allocate the bulk of participants, respecting the restrictions and rules I defined.
+I used AI to go through a step-by-step process of organization and classification of the raw data, using by my knowledge of ranked-preference techniques common in market research. Given correct and specific prompts, the model was able to allocate the bulk of participants, respecting the restrictions and rules I defined.
 
 The main limitation came from the size of the context window I had access to. With enough memory, the LLM was able to solve the puzzle, and the exercise served as a proof-of-concept for the development of an automated algorithm for the next version of the app. 
 

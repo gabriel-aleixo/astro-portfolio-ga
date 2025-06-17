@@ -4,9 +4,11 @@ import Projects from "../components/Projects.astro";
 import Contact from "../components/Contact.astro";
 import CTAButton from "../components/CTAButton.astro";
 // Get just featured/recent projects for homepage
-const allProjects = await Astro.glob("../pages/projects/details/*.md");
+const allProjects = await Promise.all(
+    Object.values(import.meta.glob("../pages/projects/details/*.md")).map(f => f())
+);
 const featuredProjects = allProjects
-    .filter((project) => project.frontmatter.featured)
+    .filter((project: { frontmatter: { featured: boolean } }) => project.frontmatter.featured)
     .slice(0, 3); // Only show top 3
 ---
 

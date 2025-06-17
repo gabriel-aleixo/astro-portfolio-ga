@@ -19,7 +19,7 @@ const {
                 <h2>{project.frontmatter.title}</h2>
                 <p>{project.frontmatter.description}</p>
                 <div class="tech-stack">
-                    {project.frontmatter.tech.map((tech) => (
+                    {project.frontmatter.tech && project.frontmatter.tech.map((tech) => (
                         <span class="tech-tag">{tech}</span>
                     ))}
                 </div>

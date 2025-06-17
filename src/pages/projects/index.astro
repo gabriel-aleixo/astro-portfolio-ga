@@ -1,7 +1,9 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Projects from "../../components/Projects.astro";
-const allProjects = await Astro.glob("./details/*.md");
+const allProjects = await Promise.all(
+    Object.values(import.meta.glob("./details/*.md")).map(f => f())
+);
 const sortedProjects = allProjects.sort((a, b) => 
     new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
 );
@@ -11,7 +13,7 @@ const sortedProjects = allProjects.sort((a, b) =>
     <section class="header">
 
         <h1>Projects</h1>
-        <p>A selection of my recent work</p>
+        <p>A selection of my work</p>
     </section>
 
     <Projects projects={sortedProjects} />
