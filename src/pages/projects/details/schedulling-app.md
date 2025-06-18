@@ -7,10 +7,10 @@ link: https://github.com/yourusername/project-one
 date: 2024-10-01
 featured: true
 images:
-    - /src/images/project-images/scheduling-app/1.svg
-    - /src/images/project-images/scheduling-app/2.svg
-    - /src/images/project-images/scheduling-app/3.svg
-    - /src/images/project-images/scheduling-app/4.svg
+    - /src/images/project-images/scheduling-app/1.webp
+    - /src/images/project-images/scheduling-app/2.webp
+    - /src/images/project-images/scheduling-app/3.webp
+    - /src/images/project-images/scheduling-app/4.webp
 ---
 
 ## The Problem

@@ -7,7 +7,7 @@ link: https://github.com/gabriel-aleixo/astro-portfolio-ga
 date: 2025-02-01
 featured: false
 images:
-    - /src/images/project-images/portfolio-website/1.svg
+    - /src/images/project-images/portfolio-website/1.webp
 ---
 
 ## The Problem

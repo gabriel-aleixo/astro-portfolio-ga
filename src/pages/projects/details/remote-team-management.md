@@ -7,9 +7,9 @@ link: https://github.com/gabriel-aleixo/quiteoften-v2-pub/
 date: 2021-01-01
 featured: true
 images:
-    - /src/images/project-images/remote-team-management/1.svg
-    - /src/images/project-images/remote-team-management/2.svg
-    - /src/images/project-images/remote-team-management/3.svg
+    - /src/images/project-images/remote-team-management/1.webp
+    - /src/images/project-images/remote-team-management/2.webp
+    - /src/images/project-images/remote-team-management/3.webp
 ---
 
 ## The Problem

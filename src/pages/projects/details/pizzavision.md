@@ -7,9 +7,9 @@ link: https://github.com/gabriel-aleixo/pizza-vision
 date: 2024-01-15
 featured: true
 images:
-    - /src/images/project-images/pizzavision/1.svg
-    - /src/images/project-images/pizzavision/2.svg
-    - /src/images/project-images/pizzavision/3.svg
+    - /src/images/project-images/mobile-computer-vision-app/1.webp 
+    - /src/images/project-images/mobile-computer-vision-app/2.webp
+    - /src/images/project-images/mobile-computer-vision-app/3.webp
 ---
 
 ## The Problem

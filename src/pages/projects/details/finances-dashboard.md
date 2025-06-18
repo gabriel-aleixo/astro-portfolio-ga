@@ -7,8 +7,8 @@ link: https://github.com/gabriel-aleixo/finances-dashboard-nextjs-prisma
 date: 2024-03-15
 featured: true
 images:
-    - /src/images/project-images/finances-dashboard/1.svg
-    - /src/images/project-images/finances-dashboard/2.svg
+    - /src/images/project-images/finances-dashboard/1.webp
+    - /src/images/project-images/finances-dashboard/2.webp
 ---
 
 ## The Problem
