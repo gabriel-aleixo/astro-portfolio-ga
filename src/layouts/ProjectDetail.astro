@@ -109,6 +109,22 @@ const images = await Promise.all(
         scroll-snap-type: x mandatory;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        animation: carousel-hint 1s ease-in-out 0.5s forwards;
+    }
+
+    @keyframes carousel-hint {
+        0% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(-40px);
+        }
+        50% {
+            transform: translateX(-40px);
+        }
+        100% {
+            transform: translateX(0);
+        }
     }
 
     .carousel-slide {
