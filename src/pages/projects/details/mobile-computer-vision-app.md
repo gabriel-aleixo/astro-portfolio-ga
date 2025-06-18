@@ -38,6 +38,7 @@ TensorFlow.js with MobileNet was selected for image recognition, offering a good
 One of the most significant challenges was implementing efficient image similarity search. The app needed to quickly identify similar product packages from the user's photo library, which required careful optimization of the image processing pipeline.
 
 The solution involved:
+
 - Pre-processing images to focus on product packaging
 - Implementing efficient similarity algorithms
 - Caching processed images to improve performance

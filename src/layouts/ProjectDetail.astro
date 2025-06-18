@@ -37,7 +37,7 @@ const images = await Promise.all(
                 </div>
                 <div class="carousel-nav">
                     {frontmatter.images.map((_, index) => (
-                        <a href={`#slide-${index}`} class="carousel-dot"></a>
+                        <a href={`#slide-${index}`} id={`nav-dot-${index}`} aria-label={`Go to slide ${index + 1}`} class="carousel-dot"></a>
                     ))}
                 </div>
             </div>
@@ -127,6 +127,12 @@ const images = await Promise.all(
         justify-content: center;
         gap: 0.5rem;
         margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .carousel-nav {
+            display: none;
+        }
     }
 
     .carousel-dot {
